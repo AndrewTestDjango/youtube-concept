@@ -1,8 +1,8 @@
 # Youtube-concept - учебный проект Glo Academy
-Проект выполнил андрей Горбачев
+Проект выполнил Андрей Горбачев
 
 ## Используемые технологии
-- html
-- css
-- normalize.css
+- HTML
+- CSS
+- Normalize.css
 - SVG Sprites
