@@ -2,7 +2,25 @@ const swiper = new Swiper('.channel-slider', {
   // Optional parameters
   //direction: 'vertical',
   loop: true,
-  slidesPerView: 6,
+  slidesPerView: 1,
+  spaceBetween: 20,
+  breakpoints: {
+    1900: { // для ширины 1900px и больше
+      slidesPerView: 6,
+    },
+    1600: { 
+      slidesPerView: 5,
+    },
+    1300: { 
+      slidesPerView: 4,
+    },
+    1100: { 
+      slidesPerView: 3,
+    },
+    800: { 
+      slidesPerView: 2,
+    },
+  },
 
   // Navigation arrows
   navigation: {
@@ -17,8 +35,17 @@ const swiper2 = new Swiper('.recommended-slider', {
   // Optional parameters
   //direction: 'vertical',
   loop: true,
-  slidesPerView: 3,
-   spaceBetween: 40,
+  slidesPerView: 1,
+  spaceBetween: 20,
+  breakpoints: {
+    
+    1600: { 
+      slidesPerView: 3,
+    },
+    1100: { 
+      slidesPerView: 2,
+    },
+  },
 
   // Navigation arrows
   navigation: {
@@ -33,9 +60,25 @@ const swiper3 = new Swiper('.food-drink-slider', {
   // Optional parameters
   //direction: 'vertical',
   loop: true,
-  slidesPerView: 6,
-   
-
+  slidesPerView: 1,
+  spaceBetween: 20,
+  breakpoints: {
+    1900: { // для ширины 1900px и больше
+      slidesPerView: 6,
+    },
+    1600: { 
+      slidesPerView: 5,
+    },
+    1300: { 
+      slidesPerView: 4,
+    },
+    1100: { 
+      slidesPerView: 3,
+    },
+    800: { 
+      slidesPerView: 2,
+    },
+  },
   // Navigation arrows
   navigation: {
     nextEl: '.food-button-next',
@@ -44,3 +87,15 @@ const swiper3 = new Swiper('.food-drink-slider', {
 
 
 });
+
+const searchBtn = document.querySelector(".mobile-search");
+const mobileSearch = document.querySelector(".input-group");
+searchBtn.addEventListener("click",() => {
+  mobileSearch.classList.toggle('is-open');
+});
+
+if (document.documentElement.scrollWidth <= 640) {
+  swiper.destroy();
+  swiper2.destroy();
+  swiper3.destroy();
+}
